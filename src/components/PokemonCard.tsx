@@ -7,6 +7,8 @@ const Container = styled.div`
   display: inline-flex;
   flex-direction: column;
   align-items: center;
+  min-height: 140px;
+  min-width: 130px;
   margin-right: 8px;
   padding: 16px;
   border-radius: 16px;
@@ -26,6 +28,7 @@ export const PokemonCard = ({ id }: PokemonCardProps) => {
       {data && (
         <>
           <div style={{ fontWeight: 700 }}>{data.name}</div>
+          <div style={{ justifyContent: "space-between" }} />
           {data.fed === false && (
             <button onClick={() => feed()}>Feed me</button>
           )}
